@@ -63,7 +63,7 @@ deploymentConfigurations:
         trackDigests: false
         insecureRegistry: false
         repositories: []
-        passwordFile: /tmp/gcr-account.json
+        passwordFile: encryptedFile:gcr-account:gcr-account.json
       primaryAccount: dockerhub
     google:
       enabled: false
@@ -268,7 +268,7 @@ deploymentConfigurations:
         permissions: {}
         project: development-project-210505
         subscriptionName: quotient-gcb1
-        jsonKey: /tmp/gcr-account.json
+        jsonKey: encryptedFile:gcr-account:gcr-account.json
     codebuild:
       enabled: false
       accounts: []
@@ -326,7 +326,7 @@ deploymentConfigurations:
       enabled: true
       accounts:
       - name: gcs-demo
-        jsonPath: /tmp/gcr-account.json
+        jsonPath: encryptedFile:gcr-account:gcr-account.json
     oracle:
       enabled: false
       accounts: []
@@ -368,7 +368,7 @@ deploymentConfigurations:
         subscriptionName: quotient-gcb1
         ackDeadlineSeconds: 10
         messageFormat: GCB
-        jsonPath: /tmp/gcr-account.json
+        jsonPath: encryptedFile:gcr-account:gcr-account.json
       publishers: []
   canary:
     enabled: false
